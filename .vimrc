@@ -1,3 +1,28 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" 
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+" 
+" " let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+" 
+" " git plugin for VimCompleteMe
+" Plugin 'file://~/.vim/VimCompletesMe/plugin/VimCompletesMe.vim'
+" 
+" " All of your Plugins must be added before the following line
+" call vundle#end()            " required
+execute pathogen#infect()
+execute pathogen#helptags()
+filetype on
+filetype plugin indent on    " required
+
+nmap f <Plug>(easymotion-f)
+nmap F <Plug>(easymotion-F)
+
 " Use the Solarized Dark theme
 set background=dark
 " colorscheme hybrid " solarized
@@ -73,8 +98,13 @@ nnoremap <C-H> <C-W><C-H>
 
 
 " Show “invisible” characters
+<<<<<<< HEAD
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set list
+=======
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" set list
+>>>>>>> upstream/master
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -128,3 +158,32 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" mapping to make movements operate on 1 screen line in wrap mode
+" function! ScreenMovement(movement)
+"     if &wrap
+"         return "g" . a:movement
+"     else
+"         return a:movement
+"     endif
+" endfunction
+" onoremap <silent> <expr> j ScreenMovement("j")
+" onoremap <silent> <expr> k ScreenMovement("k")
+" onoremap <silent> <expr> 0 ScreenMovement("0")
+" onoremap <silent> <expr> ^ ScreenMovement("^")
+" onoremap <silent> <expr> $ ScreenMovement("$")
+" nnoremap <silent> <expr> j ScreenMovement("j")
+" nnoremap <silent> <expr> k ScreenMovement("k")
+" nnoremap <silent> <expr> 0 ScreenMovement("0")
+" nnoremap <silent> <expr> ^ ScreenMovement("^")
+" nnoremap <silent> <expr> $ ScreenMovement("$"
+" let g:snips_trigger_key = '<C-CR>'
+" :let g:snips_trigger_key_backwards = '<c-tab>'
+" :imap <C-J> <Plug>snipMateNextOrTrigger
+
+" Add key binding for snippets
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+
+" Add *hql comment string
+autocmd FileType sql setlocal commentstring=--\ %s
