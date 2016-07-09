@@ -98,13 +98,13 @@ nnoremap <C-H> <C-W><C-H>
 
 
 " Show “invisible” characters
-<<<<<<< HEAD
+"<<<<<<< HEAD
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set list
-=======
+"=======
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " set list
->>>>>>> upstream/master
+">>>>>>> upstream/master
 " Highlight searches
 set hlsearch
 " Ignore case of searches
