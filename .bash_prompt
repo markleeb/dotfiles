@@ -1,4 +1,6 @@
+
 #!/usr/bin/env bash
+
 
 # Shell prompt based on the Solarized Dark theme.
 # Screenshot: http://i.imgur.com/EkEtphC.png
@@ -67,7 +69,7 @@ if tput setaf 1 &> /dev/null; then
 	reset=$(tput sgr0);
 	# Solarized colors, taken from http://git.io/solarized-colors.
 	black=$(tput setaf 0);
-	blue=$(tput setaf 33);
+	blue=$(tput setaf 34);
 	cyan=$(tput setaf 37);
 	green=$(tput setaf 64);
 	orange=$(tput setaf 166);

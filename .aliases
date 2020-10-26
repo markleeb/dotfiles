@@ -150,3 +150,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+alias gcloud="~/google-cloud-sdk/bin/gcloud"
+
+# have ipython start up with startup commands file
+alias ipython="ipython -i ~/ipython_startup_commands.ipy"
+
+# Google cloud login commands:
+alias gcloud_login="gcloud auth login && gcloud auth application-default login"
